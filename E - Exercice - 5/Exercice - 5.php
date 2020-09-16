@@ -232,7 +232,8 @@ function quelleDAte(){
     $year = idate("Y");// year ( 4 digits) else "y"(1-2digits)
 
     if ($month < 10){
-        $month = "0".$month;
+        //$month = "0".$month;
+        $month = str_pad($month, 2, '0', STR_PAD_LEFT);// 2 façon de la faire
     } else {
         return $month;
     }
